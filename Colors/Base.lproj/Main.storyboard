@@ -32,9 +32,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="multiple color" id="k99-4q-9ue"/>
-                    <connections>
-                        <segue destination="Y02-x9-fu5" kind="show" identifier="goToItems" id="j8r-RB-OZw"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zhw-W9-z5H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -43,13 +40,13 @@
         <!--Selected Color View Controller-->
         <scene sceneID="OEb-EX-QA2">
             <objects>
-                <viewController id="Y02-x9-fu5" customClass="SelectedColorViewController" customModule="Colors" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectedColorViewController" id="Y02-x9-fu5" customClass="SelectedColorViewController" customModule="Colors" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ELB-jD-S9P">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="selected color screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRB-z9-n1k">
-                                <rect key="frame" x="20" y="113" width="374" height="33.5"/>
+                                <rect key="frame" x="20" y="69" width="374" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

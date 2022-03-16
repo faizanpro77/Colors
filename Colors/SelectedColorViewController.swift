@@ -9,7 +9,7 @@ import UIKit
 
 class SelectedColorViewController: UIViewController {
     
-    var selectedColor: UIColor = .black
+    var selectedColor: UIColor?
 
     override func viewDidLoad() {
         super.viewDidLoad()

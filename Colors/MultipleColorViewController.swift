@@ -70,17 +70,23 @@ class MultipleColorViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         //performSegue(withIdentifier: "goToItems", sender: colors[indexPath.row])
-        performSegue(withIdentifier: "goToItems", sender: colors[indexPath.row])
+//        performSegue(withIdentifier: "goToItems", sender: colors[indexPath.row])
+        let controller =  storyboard?.instantiateViewController(withIdentifier: "SelectedColorViewController") as? SelectedColorViewController
+        guard let vc = controller else{
+            return
+        }
+        vc.selectedColor = colors[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
         tableView.deselectRow(at: indexPath, animated: false)
         
     }
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! SelectedColorViewController
-        if let selectedColor = sender as? UIColor {
-            destinationVC.selectedColor = selectedColor
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let destinationVC = segue.destination as! SelectedColorViewController
+//        if let selectedColor = sender as? UIColor {
+//            destinationVC.selectedColor = selectedColor
+//        }
+//    }
     
 }
